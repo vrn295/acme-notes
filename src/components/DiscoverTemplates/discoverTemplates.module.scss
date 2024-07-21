@@ -1,0 +1,70 @@
+@import '../../app/variables.scss';
+
+.discover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  h2 {
+    font-size: 2.5rem;
+    margin: 6rem 0 4rem 0;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+    gap: 2rem;
+    li {
+      transition: all 0.3s ease;
+      .image_container {
+        position: relative;
+        height: 250px;
+        margin-bottom: 0.75rem;
+        img {
+          border-radius: 8px;
+        }
+      }
+      span {
+        font-size: 1.2rem;
+      }
+      &:hover {
+          transform: translate(0%, -5%);
+      }
+    }
+  }
+  @media screen and (max-width: 900px) {
+    h2 {
+      font-size: 2rem;
+    }
+    ul {
+      grid-template-columns: 1fr 1fr;
+      li {
+        .image_container {
+          height: 200px;
+        }
+        span {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    h2 {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    ul {
+      grid-template-columns: 1fr;
+      li {
+        .image_container {
+          height: 150px;
+        }
+        span {
+          font-size: 0.8rem;
+        }
+      }
+    }
+    
+  }
+}

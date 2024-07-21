@@ -1,0 +1,60 @@
+@import '../../app/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  & h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 5rem;
+    & span {
+      color: $font-secondary-color;
+    }
+  }
+  .hero_subheading {
+    text-align: center;
+    color: $font-primary-color;
+    font-size: 1rem;
+    margin: 1rem 0 2rem 0;
+  }
+  .btn_container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .hero_banner {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+  @media screen and (max-width: 900px) {
+    & h1 {
+      font-size: 2rem;
+    }
+    .hero_subheading {
+      font-size: 0.8rem;
+    }
+    .hero_banner {
+      img {
+        width: 90%;
+        height: auto;
+      }
+    }
+    .btn_container:nth-child(2) {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    & h1 {
+      font-size: 1.5rem;
+    }
+    .hero_subheading {
+      font-size: 0.7rem;
+    }
+    
+  }
+}

@@ -1,0 +1,66 @@
+@import '../../../app/variables.scss';
+
+$button-padding-y: 14px; // Adjust padding as needed
+$button-padding-x: 28px; // Adjust padding as needed
+$button-border-radius: 30px; // Adjust border radius as needed
+$button-border-width: 1.5px; // Adjust border width as needed
+$button-border-color: $primary-color; // Adjust border color as needed
+$button-background: $primary-color; // Adjust background color as needed
+$button-color: #fff; // Adjust text color as needed
+$hover-background: lighten($button-background, 10%);
+.btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: $button-padding-y $button-padding-x;
+  border-radius: $button-border-radius;
+  border-width: $button-border-width;
+  border-style: solid;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: $button-background;
+  color: $button-color;
+  border-color: $button-background;
+  position: relative;
+  &:hover {
+    transition: all 0.3s ease;
+    transform: translateY(-4px);
+  }
+  &FullWidth {
+    width: 100%;
+  }
+
+  &Small {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  &Medium {
+    font-size: 16px;
+  }
+
+  &Large {
+    font-size: 20px;
+  }
+
+  &Outlined {
+    background-color: transparent;
+    border-color: $font-primary-color;
+    color: $font-primary-color;
+  }
+
+  &Text {
+    background-color: transparent;
+    border-color: transparent;
+    color: $button-background;
+    mix-blend-mode: difference;
+  }
+  @media screen and (max-width: 900px) {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}

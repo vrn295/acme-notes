@@ -1,0 +1,181 @@
+@import '../../app/variables.scss';
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $font-primary-color;
+  width: 100vw;
+  margin-top: 6rem;
+  color: $background-color;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  padding: 3rem 10rem;
+  &_content {
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+  .subscribe {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba($background-color, 0.25);
+    h4 {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    form {
+      fieldset {
+        display: flex;
+        width: 400px;
+        height: 45px;
+        position: relative;
+        border-radius: 35px;
+        overflow: hidden;
+        background-color: $background-color;
+        border: none;
+        .subscribe_input {
+          width: 200px;
+          background: none;
+          border: none;
+          outline: none;
+          padding: 12px 20px;
+          font-size: 0.75rem;
+          color: #6A7C92;
+          &:focus {
+            outline: none;
+          }
+        }
+        button {
+          font-size: 0.75rem;
+          color: #6A7C92;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 70px;
+          height: 35px;
+          border-radius: 17px;
+          border: none;
+          background: none;
+          box-shadow: 5px -2px 81px 1px rgba(0,0,0,0.09);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .footerLinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba($background-color, 0.25);
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      li {
+        font-size: 1.2rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        background-color: rgba($primary-color, 0.2);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  .certificate {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    font-size: 0.75rem;
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    padding: 3rem 1rem;
+    &_content {
+      padding: 0 1rem;
+    }
+    .subscribe {
+      flex-direction: column;
+      align-items: center;
+      h4 {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+      form {
+        width: 100%;
+        fieldset {
+          width: 100%;
+          .subscribe_input {
+            width: 100%;
+          }
+          button {
+            width: 100px;
+          }
+        }
+      }
+    }
+    .footerLinks {
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        text-align: center;
+        font-size: 1.5rem;
+      }
+      p {
+        text-align: center;
+        font-size: 0.75rem;
+      }
+      ul {
+        margin-top: 1rem;
+        gap: 1rem;
+      }
+    }
+    .certificate {
+      flex-direction: column;
+      align-items: center;
+      ul {
+        margin-top: 1rem;
+        gap: 1rem;
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .footerLinks {
+      ul {
+        gap: 0.5rem;
+        li {
+          padding: 0.25rem;
+        }
+      }
+    }
+    .certificate {
+      ul {
+        gap: 0.5rem;
+      }
+    }
+    
+  }
+}
